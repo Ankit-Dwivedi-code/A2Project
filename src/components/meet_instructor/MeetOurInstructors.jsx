@@ -6,25 +6,25 @@ const instructors = [
     name: 'Dr. xyz Sharma',
     role: 'Senior Full-Stack Developer',
     image: '/img/men.png', 
-    bio: 'Dr. Aditi has over 10 years of experience in full-stack development and has worked with various technologies, including React, Node.js, and MongoDB.',
+    bio: 'Dr. xyz has over 10 years of experience in full-stack development and has worked with various technologies, including React, Node.js, and MongoDB.',
   },
   {
     name: 'Mr. xyz Verma',
     role: 'Data Science Expert',
     image: '/img/men.png', 
-    bio: 'Rahul specializes in data analysis and machine learning, guiding students through practical projects in Python and R.',
+    bio: 'xyz specializes in data analysis and machine learning, guiding students through practical projects in Python and R.',
   },
   {
     name: 'Ms. abc Iyer',
     role: 'UI/UX Designer',
     image: '/img/women.png', 
-    bio: 'With a keen eye for design, Sneha helps students understand the principles of UI/UX and how to create user-friendly applications.',
+    bio: 'With a keen eye for design, abc helps students understand the principles of UI/UX and how to create user-friendly applications.',
   },
   {
     name: 'Mr. def Patel',
     role: 'Machine Learning Specialist',
     image: '/img/men.png', 
-    bio: 'Amit focuses on teaching the fundamentals of machine learning, from theory to practical implementations in real-world projects.',
+    bio: 'def focuses on teaching the fundamentals of machine learning, from theory to practical implementations in real-world projects.',
   },
 ];
 

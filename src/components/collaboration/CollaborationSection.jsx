@@ -13,38 +13,37 @@ const CollaborationSection = () => {
           </a>
         </h2>
         
-        {/* Logos Section */}
-        <div className="flex flex-wrap justify-center items-center gap-4 ">
-          {/* Replace src with your logos */}
+        {/* Logos Section with 3 images per row on small screens */}
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           <img 
             src="/img/google.png" 
             alt="Google" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
           <img 
             src="/img/facebook.png" 
             alt="Facebook" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
           <img 
             src="/img/samsung.png" 
             alt="Samsung" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
           <img 
             src="/img/ibm.png" 
             alt="IBM" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
           <img 
             src="/img/amazon.png" 
             alt="Amazon" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
           <img 
             src="/img/microsoft.png" 
             alt="Microsoft" 
-            className="h-16 md:h-24 cursor-pointer"
+            className="h-16 md:h-24 max-w-[150px] w-full object-contain"
           />
         </div>
       </div>

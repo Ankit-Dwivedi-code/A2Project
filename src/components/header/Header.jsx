@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -42,8 +42,8 @@ const Header = () => {
         
         {/* Social Media Icons Section */}
         <div className="flex space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-transform duration-300 transform hover:scale-125">
-            <FaFacebookF className="text-lg" />
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-transform duration-300 transform hover:scale-125">
+            <FaYoutube className="text-lg" />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-400 transition-transform duration-300 transform hover:scale-125">
             <FaTwitter className="text-lg" />

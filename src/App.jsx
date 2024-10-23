@@ -8,6 +8,8 @@ import MeetOurInstructors from './components/meet_instructor/MeetOurInstructors.
 import FAQAccordion from './components/faq/FAQAccordion.jsx'
 import JoinNow from './components/last_comp/JoinNow.jsx'
 import Courses from './components/courses/Courses.jsx'
+import FloatingContactButton from './components/FloatingContactButton/FloatingContactButton.jsx'
+import ChatBot from './components/ChatBot/ChatBot.jsx'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
     <>
       <Header />
       <HeroSection />
+      <FloatingContactButton />
+      <ChatBot />
       <CollaborationSection />
       <FeaturedCourses />
       <VoiceOfSuccess />

@@ -45,7 +45,7 @@ const CourseFee = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #0057D9;
+  background-color: #1E88E5;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -55,7 +55,7 @@ const Button = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #028a52; 
+    background-color: #1976D2; 
   }
 `;
 
