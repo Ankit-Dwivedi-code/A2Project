@@ -56,10 +56,11 @@ const FeaturedCourses = () => {
         
         {/* Section Heading */}
         <h2 className="text-xl font-bold text-center text-gray-600 ">
-          Featured Courses and Professional Certificates
+        Dive into expert articles to sharpen your skills.
         </h2>
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          Learn with the Best
+        Empower Your Learning
+        
         </h2>
 
         {/* Courses Grid */}
@@ -75,18 +76,18 @@ const FeaturedCourses = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">{course.name}</h3>
               <p className="text-gray-600">{course.description}</p>
               <button className="mt-6 bg-blue-600 text-white py-2 px-4 rounded-full text-sm hover:bg-blue-700 transition-colors">
-                Explore Course
+                Read More...
               </button>
             </div>
           ))}
         </div>
 
         {/* Browse All Courses Button */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-blue-600 text-white py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition-colors">
             Browse All Courses
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

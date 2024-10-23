@@ -109,20 +109,13 @@ const Courses = () => {
 
   return (
     <>
-      <h2 style={{
-        textAlign: 'center',
-        fontSize: '2.3rem',
-        fontWeight: 'bold',
-        backgroundColor: '#ffffff',
-        color: '#292524',
-        padding: '20px',
-        borderRadius: '8px', 
-        // boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        // textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-        // margin: '20px 0' 
-      }}>
-        Available Courses
-      </h2>
+      {/* Section Heading */}
+      <h2 className="text-xl font-bold text-center text-gray-600 mt-5 py-3">
+          Featured Courses and Professional Certificates
+        </h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+          Learn with the Best
+        </h2>
       <CoursesContainer>
         {courseData.map((course, index) => (
           <CourseCard key={index}>

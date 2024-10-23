@@ -10,6 +10,8 @@ import JoinNow from './components/last_comp/JoinNow.jsx'
 import Courses from './components/courses/Courses.jsx'
 import FloatingContactButton from './components/FloatingContactButton/FloatingContactButton.jsx'
 import ChatBot from './components/ChatBot/ChatBot.jsx'
+import Navbar from './components/navbar/Navbar.jsx'
+import Footer from './components/footer/Footer.jsx'
 
 
 function App() {
@@ -18,17 +20,19 @@ function App() {
   return (
     <>
       <Header />
+      <Navbar />
       <HeroSection />
       <FloatingContactButton />
       <ChatBot />
       <CollaborationSection />
-      <FeaturedCourses />
+      <Courses />
       <VoiceOfSuccess />
       {/* <FeaturedPrograms /> */}
-      <Courses />
+      <FeaturedCourses />
       <MeetOurInstructors />
       <FAQAccordion />
       <JoinNow />
+      <Footer />
     </>
   )
 }
