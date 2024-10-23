@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaPhoneAlt, FaWhatsapp, FaChevronRight } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'; // Keep these icons for WhatsApp and Phone
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,15 +33,19 @@ const FloatingContactButton = () => {
         </div>
       )}
 
-      {/* Main Floating Button */}
+      {/* Main Floating Button with PNG */}
       <div
         onClick={handleToggle}
-        className="bg-blue-600 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 transition duration-300"
+        className="bg-blue-600 p-3 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 transition duration-300"
       >
-        <FaChevronRight
-          className={`text-xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-        /> {/* Arrow rotates when open */}
-      </div>
+        {/* <img
+          src="/img/contact-icon.png" // Replace with the path to your PNG
+          alt="Contact Us"
+          className="w-8 h-8 object-contain " // Adjust the size as needed
+        /> */}
+        <ConnectWithoutContactIcon style={{ color: 'white', fontSize: '24px' }} />
+        </div>
+      
     </div>
   );
 };
