@@ -92,8 +92,8 @@ const ChatBot = () => {
                 <p
                   className={`inline-block p-2 rounded-lg ${
                     log.sender === 'bot'
-                      ? 'bg-gray-100 text-gray-800'
-                      : 'bg-blue-600 text-white'
+                      ? 'bg-gray-100 text-gray-800 font-bold text-sm'
+                      : 'bg-blue-600 text-white font-bold text-sm'
                   }`}
                 >
                   {log.message}
