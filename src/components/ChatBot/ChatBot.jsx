@@ -31,7 +31,7 @@ const ChatBot = () => {
   const getBotResponse = (userMessage) => {
     const lowerCaseMessage = userMessage.toLowerCase();
     
-    if (lowerCaseMessage.includes('hello')) {
+    if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')|| lowerCaseMessage.includes('hii')) {
       return 'Hello! How can I assist you?';
     } else if (lowerCaseMessage.includes('name')) {
       return 'My name is A2 Pyramid Bot. What’s yours?';
