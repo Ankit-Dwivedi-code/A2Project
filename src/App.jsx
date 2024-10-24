@@ -23,10 +23,18 @@ function App() {
     <Router>
       <Routes>
         {/* Login route */}
-        <Route path="/auth/a2/login" element={<Login />} />
+        <Route path="/auth/a2/login" element={<>
+        <Navbar />
+        <Login />
+        <Footer />
+        </>} />
 
         {/* Signup route */}
-        <Route path="/auth/a2/signup" element={<Signup />} />
+        <Route path="/auth/a2/signup" element={<>
+        <Navbar />
+        <Signup />
+        <Footer />
+        </>} />
 
         {/* Forgot password route */}
         <Route path="/auth/a2/forgotpassword" element={<ForgotPassword />} />
@@ -58,6 +66,7 @@ function App() {
         <Route path='*' element={<>
           <Navbar />
           <ErrorPage />
+          <Footer />
           </>} />
       </Routes>
     </Router>
