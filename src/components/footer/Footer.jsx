@@ -78,10 +78,10 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 text-sm">
         <hr className="border-gray-700 mb-4" />
-        <p>&copy; 2024 A2 Pyramid Edutech. All rights reserved.</p>
-        <p>Privacy Policy | Terms and Conditions</p>
+        <p className='text-sm'>&copy; 2024 A2 Pyramid Edutech. All rights reserved.</p>
+        <p className='text-sm'>Privacy Policy | Terms and Conditions</p>
       </div>
     </footer>
   );

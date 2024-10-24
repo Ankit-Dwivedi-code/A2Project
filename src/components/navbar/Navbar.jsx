@@ -17,16 +17,19 @@ const Navbar = () => {
     return () => document.removeEventListener('click', handleOutsideClick);
   }, []);
 
-  
-
   return (
     <header className="w-full bg-white shadow-md sticky top-0 z-50">
       <div className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
-        {/* Logo */}
+        {/* Left side: Logo */}
         <Link to="/" className="text-xl font-bold text-gray-600 flex items-center">
           <img src="/img/logo2.png" alt="Logo" className="w-10 h-10 rounded-full" />
+        </Link>
+
+        {/* Middle: Courses Dropdown and Search Bar */}
+        <div className="flex items-center space-x-6">
+          {/* Courses Dropdown */}
           <div
-            className="relative cursor-pointer courses-dropdown ml-4"
+            className="relative cursor-pointer courses-dropdown"
             onClick={() => setShowExploreDropdown(!showExploreDropdown)}
           >
             <div className="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
@@ -42,10 +45,9 @@ const Navbar = () => {
               </div>
             )}
           </div>
-        </Link>
 
-        {/* Search Bar */}
-        <div className="hidden md:flex items-center relative">
+          {/* Search Bar */}
+          <div className="hidden md:flex items-center relative ">
           <div className="absolute left-1">
             <img src="/img/logo2.png" alt="Search Icon" className="w-8 h-8" />
           </div>
@@ -58,9 +60,10 @@ const Navbar = () => {
             <FaSearch />
           </button>
         </div>
-
-        {/* Auth Buttons */}
+        </div>
+        {/* Right side: Contact, Login, and Sign Up */}
         <div className="hidden md:flex items-center space-x-4">
+          <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
           <Link to="/auth/a2/login" className="text-gray-700 hover:text-blue-600">Login</Link>
           <Link to="/auth/a2/signup" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
             Sign Up
@@ -77,7 +80,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md py-4">
           <div className="flex flex-col space-y-4 px-4">
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600">Pricing</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
             <Link to="/auth/a2/login" className="text-gray-700 hover:text-blue-600">Login</Link>
             <Link to="/auth/a2/signup" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
               Sign Up
