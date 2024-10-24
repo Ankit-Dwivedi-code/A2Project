@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import './HeroSection.css';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -33,7 +34,7 @@ const HeroSection = () => {
             Start, advance, or switch your career with a variety of courses, certifications, and degrees from top educators and institutions worldwide.
           </p>
           <button className="bg-blue-600 text-white py-3 px-6 sm:px-8 rounded text-base sm:text-lg hover:bg-blue-700 transition-colors">
-            Join For Free
+            <Link to="/auth/a2/signup">Join For Free</Link>
           </button>
         </div>
 

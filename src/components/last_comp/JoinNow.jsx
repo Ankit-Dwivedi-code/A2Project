@@ -1,5 +1,7 @@
 import React from 'react';
 import './JoinNow.css'; // Import for custom styles
+import { Link } from 'react-router-dom';
+
 
 const JoinNow = () => {
   return (
@@ -22,9 +24,9 @@ const JoinNow = () => {
           <p className="text-gray-600 mb-6">
             Join now to receive personalized recommendations from the full A2 Pyramid catalog.
           </p>
-          <a href="#" className="bg-indigo-600 mt-16 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition duration-300">
+          <Link to="/auth/a2/signup" className="bg-indigo-600 mt-16 text-white px-6 py-3 rounded-lg hover:bg-indigo-500 transition duration-300">
             Join for Free
-          </a>
+          </Link>
         </div>
       </div>
     </section>
