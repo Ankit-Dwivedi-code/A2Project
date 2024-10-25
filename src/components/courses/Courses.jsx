@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const CoursesContainer = styled.div`
@@ -123,9 +123,9 @@ const Courses = () => {
             <CourseTitle>{course.title}</CourseTitle>
             <CourseDescription>{course.description}</CourseDescription>
             <CourseFee>Course Fee: {course.fee}</CourseFee>
-            <a href={course.link}>
+            <Link to={course.link}>
               <Button>Enroll Now</Button>
-            </a>
+            </Link>
           </CourseCard>
         ))}
       </CoursesContainer>

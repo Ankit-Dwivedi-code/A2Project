@@ -17,6 +17,11 @@ import Login from './components/login/Login.jsx';
 import Signup from './components/signup/Signup.jsx';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import Mern from './components/enrollCourses/Mern.jsx';
+import DataAnalytics from './components/enrollCourses/DataAnalytics.jsx';
+import ML from './components/enrollCourses/MachineLearning.jsx';
+import DevOps from './components/enrollCourses/DevOps.jsx';
+import QA from './components/enrollCourses/QualityAna.jsx';
 
 function App() {
   return (
@@ -61,6 +66,39 @@ function App() {
             </>
           } 
         />
+
+        {/* Enroll Courses  */}
+        <Route path='/course-Mern' element={<>
+        <Navbar />
+        <Mern />
+        <Footer />
+        </>} />
+
+        <Route path='/course-DataAnalytics' element={<>
+        <Navbar />
+        <DataAnalytics />
+        <Footer />
+        </>} />
+
+        <Route path='/course-ML' element={<>
+        <Navbar />
+        <ML />
+        <Footer />
+        </>} />
+
+        <Route path='/course-Devops' element={<>
+        <Navbar />
+        <DevOps />
+        <Footer />
+        </>} />
+
+        <Route path='/course-QA' element={<>
+        <Navbar />
+        <QA />
+        <Footer />
+        </>} />
+
+
 
         {/* Error Page  */}
         <Route path='*' element={<>
