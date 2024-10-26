@@ -64,16 +64,17 @@ const BoldText = styled.p`
 
 
 const InfoContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
 
-  @media (max-width: 768px) {
-    flex-direction: column; 
-    align-items: center;
-  }
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+margin-top: 20px;
+
+@media (max-width: 768px) {
+  flex-direction: column-reverse; 
+  align-items: center;
+  }
 `;
 
 const InfoText = styled.div`
@@ -105,18 +106,19 @@ const BrochureButton = styled.button`
 `;
 
 const BannerImage = styled.img`
+ 
   max-width: 45%;
   height: auto;
   border-radius: 15px;
   margin-right: 30px;
   border: 5px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 
   @media (max-width: 768px) {
-    max-width: 80%; 
-    margin-right: 0; 
-    margin-bottom: 20px; 
-  }
+    max-width: 100%;  
+    margin-right: 0;  
+    margin-bottom: 20px; 
+  }
 `;
 
 const Footer = styled.div`
@@ -387,7 +389,7 @@ const Specialization = () => {
   return (
     <SpecializationContainer>
         <br /><br />
-      <h2> DevOps Learning Modules</h2>
+      <h2 className='font-bold'> DevOps Learning Modules</h2>
       <br />
       <p>Master the art of DevOps with our immersive course modules designed to equip you with industry-relevant skills in continuous integration, deployment, automation, and cloud infrastructure. Learn essential tools and practices like Docker, Kubernetes, Jenkins, and cloud services, preparing you to streamline and optimize development and deployment pipelines.</p>
       <CourseList courses={courses} />
