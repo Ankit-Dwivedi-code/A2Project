@@ -22,6 +22,9 @@ import DataAnalytics from './components/enrollCourses/DataAnalytics.jsx';
 import ML from './components/enrollCourses/MachineLearning.jsx';
 import DevOps from './components/enrollCourses/DevOps.jsx';
 import QA from './components/enrollCourses/QualityAna.jsx';
+import SignupOtp from './components/verifysignupotp/SignupOtp.jsx'
+import StudentProfile from './components/student_profile/Profile.jsx'
+import StudentLoginOtp from './components/verify_student_login/VerifyLogin.jsx'
 
 function App() {
   return (
@@ -33,11 +36,30 @@ function App() {
         <Login />
         <Footer />
         </>} />
+        {/*verify student Login route */}
+        <Route path="/auth/a2/verifylogin" element={<>
+        <StudentLoginOtp />
+        <Footer />
+        </>} />
 
         {/* Signup route */}
         <Route path="/auth/a2/signup" element={<>
         <Navbar />
         <Signup />
+        <Footer />
+        </>} />
+
+        {/*student profile route */}
+        <Route path="/auth/a2/profile" element={<>
+        <Navbar />
+        <StudentProfile />
+        <Footer />
+        </>} />
+
+        {/* verify signup  */}
+        <Route path="/auth/a2/verify-signup" element={<>
+        {/* <Navbar /> */}
+        <SignupOtp />
         <Footer />
         </>} />
 

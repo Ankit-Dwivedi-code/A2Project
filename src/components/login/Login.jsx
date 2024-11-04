@@ -5,11 +5,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import { SquareLoader } from 'react-spinners';
 import './Login.css' // Custom CSS for shake effect
 
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import axios from 'axios'; // Import axios
+
 const Login = () => {
-  const [loading, setLoading] = useState(false); // State for spinner
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
-  const [shake, setShake] = useState(false); // State for shake animation
+  const [shake, setShake] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -17,7 +21,7 @@ const Login = () => {
       ...prevData,
       [id]: value,
     }));
-    setErrors((prevErrors) => ({ ...prevErrors, [id]: '' })); // Reset error on change
+    setErrors((prevErrors) => ({ ...prevErrors, [id]: '' }));
   };
 
   const validateForm = () => {
@@ -36,36 +40,43 @@ const Login = () => {
 
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors); // Set validation errors
-      setShake(true); // Trigger shake animation
-      setTimeout(() => setShake(false), 500); // Remove shake after 500ms
+      setErrors(validationErrors);
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
       return;
     }
 
-    setLoading(true); // Show spinner when signing in
+    setLoading(true);
 
-    // Simulate login process (you can replace with actual API call)
-    setTimeout(() => {
-      setLoading(false); // Hide spinner
-      setFormData({ email: '', password: '' })
-      toast.success('Successfully signed in!'); // Show success message
-      console.log('Submitted data:', formData); // Log form data
-    }, 2000); // Simulate a 2-second delay
+    try {
+      // API call using axios
+      const response = await axios.post('http://localhost:8000/api/a2/students/login', formData, {
+        withCredentials: true, // Include credentials for session handling
+      });
+
+      // console.log('API response:', response.data);
+
+      if (response.data.success && response.data.message.includes("OTP sent")) {
+        toast.info('Please verify yourself!'); // Show toast for verification needed
+        navigate('/auth/a2/verifylogin', { state: { email: formData.email } });
+    } else {
+        toast.success('Successfully signed in!');
+        // console.log('Login successful:', response.data);
+    }
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'An error occurred during login';
+      toast.error(errorMessage);
+      console.error('Login error:', error);
+    } finally {
+      setLoading(false);
+      setFormData({ email: '', password: '' });
+    }
   };
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-[#F5F7FA]">
       <ToastContainer /> {/* Toast container for notifications */}
 
-      {/* Gradient strips */}
-      <div
-        className="absolute bottom-0 left-0 w-[30px] h-[30px] bg-gradient-to-tr from-[#7B3FE4] to-[#3DC7FB] opacity-75 transform rotate-45 origin-bottom-left"
-        style={{ height: 'calc(100% + 30px)', width: '30px' }}
-      ></div>
-      <div
-        className="absolute bottom-0 right-0 w-[30px] h-[30px] bg-gradient-to-tl from-[#7B3FE4] to-[#3DC7FB] opacity-75 transform -rotate-45 origin-bottom-right"
-        style={{ height: 'calc(100% + 30px)', width: '30px' }}
-      ></div>
 
       <div className={`z-10 bg-white p-8 rounded-lg shadow-lg w-full max-w-md ${shake ? 'shake' : ''}`}>
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">Sign in to your account</h1>
@@ -106,18 +117,6 @@ const Login = () => {
           {/* Forgot Password Link */}
           <div className="text-right">
             <Link to="/auth/a2/forgotpassword" className="text-sm text-indigo-600 hover:underline">Forgot your password?</Link>
-          </div>
-
-          {/* Remember Me Checkbox */}
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="remember-me"
-              className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
-            />
-            <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-              Remember me
-            </label>
           </div>
 
           {/* Sign In Button with Spinner */}
