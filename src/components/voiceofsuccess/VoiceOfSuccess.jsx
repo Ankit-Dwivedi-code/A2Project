@@ -9,7 +9,7 @@ const VoiceOfSuccess = () => {
       feedback: 'The courses provided helped me to quickly master the technologies needed to build complex applications. I owe my success to these detailed lessons!',
     },
     {
-      name: 'Priya Patel',
+      name: 'Ayush Patel',
       role: 'Data Scientist',
       feedback: 'I found the data science and AI courses extremely helpful. The practical projects truly helped me land my current role!',
     },
@@ -19,7 +19,7 @@ const VoiceOfSuccess = () => {
       feedback: 'The web development course was easy to follow and helped me become proficient in building responsive websites.',
     },
     {
-      name: 'Sneha Iyer',
+      name: 'Riya jha',
       role: 'Machine Learning Engineer',
       feedback: 'The ML course opened many doors for me in the industry, with strong theoretical and practical concepts.',
     },

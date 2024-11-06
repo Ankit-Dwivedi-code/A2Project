@@ -51,7 +51,7 @@ const Login = () => {
     try {
       // API call using axios
       const response = await axios.post('http://localhost:8000/api/a2/students/login', formData, {
-        withCredentials: true, // Include credentials for session handling
+        withCredentials: true, 
       });
 
       // console.log('API response:', response.data);

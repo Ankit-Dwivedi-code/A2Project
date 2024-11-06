@@ -25,6 +25,8 @@ import QA from './components/enrollCourses/QualityAna.jsx';
 import SignupOtp from './components/verifysignupotp/SignupOtp.jsx'
 import StudentProfile from './components/student_profile/Profile.jsx'
 import StudentLoginOtp from './components/verify_student_login/VerifyLogin.jsx'
+import VerifyForgotPass from './components/verify_forgot_password/VerifyForgotPass.jsx'
+import ResetPassword from './components/reset-password/ResetPassword.jsx'
 
 function App() {
   return (
@@ -65,6 +67,8 @@ function App() {
 
         {/* Forgot password route */}
         <Route path="/auth/a2/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/auth/a2/verify-forgotpass" element={<VerifyForgotPass />} />
+        <Route path="/auth/a2/reset-pass" element={<ResetPassword />} />
 
         {/* Main front page */}
         <Route 

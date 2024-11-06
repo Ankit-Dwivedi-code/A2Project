@@ -82,11 +82,11 @@ const Navbar = () => {
           <FaChevronDown className="text-sm" />
         </div>
         {showExploreDropdown && (
-          <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50">
-            <Link to="/courses/data-science" className="p-2 hover:bg-gray-100 text-lg block">Data Science</Link>
-            <Link to="/courses/mern" className="p-2 hover:bg-gray-100 text-lg block">MERN</Link>
-            <Link to="/courses/machine-learning" className="p-2 hover:bg-gray-100 text-lg block">Machine Learning</Link>
-            <Link to="/courses/devops" className="p-2 hover:bg-gray-100 text-lg block">DevOps</Link>
+          <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50 font-bold text-sm">
+            <Link to="/courses/data-science" className="p-2 hover:bg-gray-100  block">Data Science</Link>
+            <Link to="/courses/mern" className="p-2 hover:bg-gray-100  block">MERN</Link>
+            <Link to="/courses/machine-learning" className="p-2 hover:bg-gray-100  block">Machine Learning</Link>
+            <Link to="/courses/devops" className="p-2 hover:bg-gray-100  block">DevOps</Link>
           </div>
         )}
       </div>
