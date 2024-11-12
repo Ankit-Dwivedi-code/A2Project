@@ -27,6 +27,24 @@ import StudentProfile from './components/student_profile/Profile.jsx'
 import StudentLoginOtp from './components/verify_student_login/VerifyLogin.jsx'
 import VerifyForgotPass from './components/verify_forgot_password/VerifyForgotPass.jsx'
 import ResetPassword from './components/reset-password/ResetPassword.jsx'
+import StudentSignup from './components/student_signup/StudentSignup.jsx'
+
+//admin signup
+import AdminSignup from './components/admin_signup/AdminSignup.jsx';
+import SignupOtpVerification from './components/admin_signup_otp/SignupOtpVerification.jsx';
+import AdminLogin from './components/admin_login/AdminLogin.jsx';
+import VerifyLoginAdmin from './components/admin_login_otp/VerifyLoginAdmin.jsx';
+import AdminDashboard from './components/admin_dasboard/AdminDashboard.jsx';
+import Trainer from './components/admin_dasboard/sub_components/Trainer.jsx';
+import StudentList from './components/admin_dasboard/sub_components/StudentList.jsx';
+import StudentSearch from './components/admin_dasboard/sub_components/StudentSearch.jsx';
+import TrainerSearch from './components/admin_dasboard/sub_components/TrainerSearch.jsx';
+import Settings from './components/admin_dasboard/sub_components/Settings.jsx';
+import CourseManagement from './components/admin_dasboard/sub_components/CourseManagement.jsx';
+import Payment from './components/admin_dasboard/sub_components/Payment.jsx';
+import ExamManagement from './components/admin_dasboard/sub_components/ExamManagement.jsx';
+import EditInfo from './components/admin_dasboard/sub_components/EditInfo.jsx';
+
 
 function App() {
   return (
@@ -50,6 +68,12 @@ function App() {
         <Signup />
         <Footer />
         </>} />
+        {/* Signup route */}
+        <Route path="/signup/student" element={<>
+        <Navbar />
+        <StudentSignup />
+        <Footer />
+        </>} />
 
         {/*student profile route */}
         <Route path="/auth/a2/profile" element={<>
@@ -69,6 +93,48 @@ function App() {
         <Route path="/auth/a2/forgotpassword" element={<ForgotPassword />} />
         <Route path="/auth/a2/verify-forgotpass" element={<VerifyForgotPass />} />
         <Route path="/auth/a2/reset-pass" element={<ResetPassword />} />
+
+
+        {/* Admin routes */}
+        <Route path="/signup/admin" element={<>
+        <Navbar />
+        <AdminSignup />
+        <Footer />
+        </>} />
+
+        <Route path="/admin-otp-verification" element={<>
+        <Navbar />
+        <SignupOtpVerification />
+        <Footer />
+        </>} />
+
+        <Route path="/admin-login" element={<>
+        <Navbar />
+        <AdminLogin />
+        <Footer />
+        </>} />
+
+        <Route path="/admin-login-verify" element={<>
+        <Navbar />
+        <VerifyLoginAdmin />
+        <Footer />
+        </>} />
+
+        <Route path="/admin-dashboard" element={<>
+        <Navbar />
+        <AdminDashboard />
+        <Footer />
+        </>} >
+        <Route path="trainer" element={<Trainer />} />
+          <Route path="student" element={<StudentList />} />
+          <Route path="students" element={<StudentSearch />} />
+          <Route path="trainers" element={<TrainerSearch />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="course" element={<CourseManagement />} />
+          <Route path="payment" element={<Payment />} />
+          <Route path="exam" element={<ExamManagement />} />
+          <Route path="edit-info" element={<EditInfo />} />
+        </Route>
 
         {/* Main front page */}
         <Route 
