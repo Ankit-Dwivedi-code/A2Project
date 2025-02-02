@@ -28,6 +28,8 @@ import StudentLoginOtp from './components/verify_student_login/VerifyLogin.jsx'
 import VerifyForgotPass from './components/verify_forgot_password/VerifyForgotPass.jsx'
 import ResetPassword from './components/reset-password/ResetPassword.jsx'
 import StudentSignup from './components/student_signup/StudentSignup.jsx'
+import Contact from './components/contact_page/contact.jsx';
+import About from './components/about_page/About.jsx';
 
 //admin signup
 import AdminSignup from './components/admin_signup/AdminSignup.jsx';
@@ -44,6 +46,14 @@ import CourseManagement from './components/admin_dasboard/sub_components/CourseM
 import Payment from './components/admin_dasboard/sub_components/Payment.jsx';
 import ExamManagement from './components/admin_dasboard/sub_components/ExamManagement.jsx';
 import EditInfo from './components/admin_dasboard/sub_components/EditInfo.jsx';
+
+// curriculum information import
+import AIMSyllabus from './components/curriculum_info/aiCurriculum.jsx';
+import DataAnalyticsSyllabus from './components/curriculum_info/dataAnalyticsCurriculum.jsx';
+import DataScienceSyllabus from './components/curriculum_info/dataScienceCurriculum.jsx';
+import MernStackSyllabus from './components/curriculum_info/mernStackCurriculum.jsx';
+import DevOpsSyllabus from './components/curriculum_info/devOPsCurriculum.jsx';
+import QASyllabus from './components/curriculum_info/qACurriculum.jsx';
 
 
 function App() {
@@ -72,6 +82,18 @@ function App() {
         <Route path="/signup/student" element={<>
         <Navbar />
         <StudentSignup />
+        <Footer />
+        </>} />
+
+        <Route path="/contact" element={<>
+        <Navbar />
+        <Contact />
+        <Footer />
+        </>} />
+
+        <Route path="/about" element={<>
+        <Navbar />
+        <About />
         <Footer />
         </>} />
 
@@ -190,6 +212,39 @@ function App() {
         <Footer />
         </>} />
 
+
+          {/* course detailed cirriculum */}
+
+          <Route path='/curriculum-ai-ml' element={<>
+        <Navbar />
+        <AIMSyllabus />
+        <Footer />
+        </>} />
+          <Route path='/curriculum-data-analytics' element={<>
+        <Navbar />
+        <DataAnalyticsSyllabus />
+        <Footer />
+        </>} />
+          <Route path='/curriculum-data-science' element={<>
+        <Navbar />
+        <DataScienceSyllabus />
+        <Footer />
+        </>} />
+          <Route path='/curriculum-mern-stack' element={<>
+        <Navbar />
+        <MernStackSyllabus />
+        <Footer />
+        </>} />
+          <Route path='/curriculum-devops' element={<>
+        <Navbar />
+        <DevOpsSyllabus />
+        <Footer />
+        </>} />
+          <Route path='/curriculum-qa' element={<>
+        <Navbar />
+        <QASyllabus />
+        <Footer />
+        </>} />
 
 
         {/* Error Page  */}

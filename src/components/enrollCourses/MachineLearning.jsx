@@ -30,8 +30,9 @@ const Header = styled.div`
 const MainTitle = styled.h1`
   font-size: 2.5rem;
   margin: 0;
-  color: black;
+  color: Green;
   margin-bottom: 20px;
+  font-weight:bold;
 
   @media (max-width: 768px) {
     font-size: 1.5rem; 
@@ -39,16 +40,6 @@ const MainTitle = styled.h1`
   }
 `;
 
-const SubTitle = styled.p`
-  color: #36454F; 
-  font-size: 1.2rem;
-  margin: 0;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 1rem; 
-  }
-`;
 
 const Highlight = styled.span`
   color: black;
@@ -56,8 +47,8 @@ const Highlight = styled.span`
 `;
 const BoldText = styled.p`
   font-weight: bold;
-  color: orangered; 
-  font-size: 1.5rem; 
+  font-size: 1rem;
+  color:green; 
   margin: 0;
   margin-bottom: 20px;
 `;
@@ -92,7 +83,7 @@ const BrochureButton = styled.button`
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-top: 20px;
+  ${'' /* margin-top: 20px; */}
 
   &:hover {
     background-color: #0056b3;
@@ -141,15 +132,16 @@ const Mern = () => {
             <Header>
               <MainTitle>MACHINE LEARNING</MainTitle>
             </Header>
-            <SubTitle>
-            Master <Highlight> Machine Learning with A2 Pyramid's top training and placement program.</Highlight> Gain hands-on experience, earn certification, and unlock career opportunities in AI and data science.
-            </SubTitle>
-            <BoldText>Course Fee: 44,999/-</BoldText>
+            
             <p>6 Months  • Online  • 100% Live Sessions</p>
-            <BrochureButton>Enroll Now</BrochureButton>
-            <Footer>
-              Application Closes: 30th Oct 2024
-            </Footer>
+            <br/>
+            <BoldText>Course Fee: 24,999/-</BoldText>
+            <BrochureButton><a href='#'>
+
+             Pay Now
+            </a>
+            </BrochureButton>
+            
           </InfoText>
           <BannerImage
             src="https://thumbs.dreamstime.com/b/machine-deep-learning-algorithms-artificial-intelligence-ai-automation-modern-technology-business-as-concept-134359416.jpg" />
@@ -244,18 +236,20 @@ const CourseDetails = styled.div`
 `;
 
 const SkillsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  ${'' /* display: flex; */}
+  ${'' /* flex-wrap: wrap; */}
+  ${'' /* padding:20px; */}
+  ${'' /* margin: 10px; */}
+  text-align:center;
 `;
 
 const Skill = styled.span`
+  text-align:center;
   background-color: #e7f3ff;
-  color: #007bff;
+  ${'' /* color: #007bff; */}
   padding: 5px 10px;
   border-radius: 12px;
-  font-size: 0.9rem;
+  font-size: 1.9rem;
 `;
 
 // Course Component
@@ -272,7 +266,7 @@ const Course = ({ course, isOpen, toggleOpen }) => {
 
       {isOpen && (
         <CourseDetails>
-          <h4>What you'll learn</h4>
+          <h3 style={{color:"green",fontWeight:"bold",textAlign:"center",fontSize:"2.3rem",textDecoration:"underline"}}>Module details</h3>
           <br />
           <ul>
             {course.learningPoints.map((point, index) => (
@@ -280,10 +274,10 @@ const Course = ({ course, isOpen, toggleOpen }) => {
             ))}
           </ul>
           <br />
-          <h4>Skills you'll gain</h4>
+          <h4 style={{color:"green",fontWeight:"bold",textAlign:"center",fontSize:"2.3rem",textDecoration:"underline"}}>Skills you'll gain</h4>
           <SkillsContainer>
             {course.skills.map((skill, index) => (
-              <Skill key={index}>{skill}</Skill>
+              <Skill key={index}>{skill},</Skill>
             ))}
           </SkillsContainer>
         </CourseDetails>
@@ -318,76 +312,75 @@ const CourseList = ({ courses }) => {
 const Specialization = () => {
   const courses = [
     {
-      title: '1. Introduction to Machine Learning',
+      title: 'Module 1 - Introduction to Machine Learning',
       duration: 1,
-      rating: 4.4,
-      reviews: 283,
+      rating: 4.7,
+      reviews: 23,
       learningPoints: [
-        'Understand the fundamentals of machine learning, including types of learning (supervised, unsupervised, and reinforcement learning).',
-        'Explore key concepts such as overfitting, underfitting, and model evaluation metrics.'
+        "Python -basics to advanced, data structures required in making machine learning models and required tools for that"
       ],
-      skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
+      skills: ['Python', "DSA", "Introduction to ML/AI"]
 
     },
     {
       title: '2. Data Preprocessing and Exploration',
-      duration: 4,
-      rating: 4.0,
-      reviews: 49,
+      duration: 2,
+      rating: 4.7,
+      reviews: 19,
       learningPoints: [
         'Learn techniques for data cleaning, transformation, and normalization.',
         'Discover exploratory data analysis (EDA) methods to visualize and understand data distributions and relationships.'
       ],
-      skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
+      skills: [ 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', "Seaborn", 'SQL', 'Data Visualization']
 
     },
     {
       title: '3. Supervised Learning Algorithms',
       duration: 3,
-      rating: 4.3,
-      reviews: 69,
+      rating: 4.8,
+      reviews: 19,
       learningPoints: [
         'Dive into regression and classification algorithms, including linear regression, logistic regression, decision trees, and support vector machines.',
         'Implement and evaluate models using various performance metrics such as accuracy, precision, recall, and F1-score.'
       ],
-      skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
+      skills: ['Scikit-learn', 'TensorFlow', 'Keras', 'PyTorch']
 
     },
     {
       title: '4. Unsupervised Learning and Clustering',
       duration: 1,
       rating: 4.4,
-      reviews: 283,
+      reviews: 23,
       learningPoints: [
         'Explore unsupervised learning techniques, focusing on clustering methods such as K-means, hierarchical clustering, and DBSCAN.',
         'Understand dimensionality reduction techniques like PCA (Principal Component Analysis) to simplify datasets.'
       ],
-      skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
+      skills: ["supervised learning","unsupervised learning","Deep learning"]
 
     },
     {
       title: '5. Deep Learning and Neural Networks',
       duration: 1,
       rating: 4.4,
-      reviews: 283,
+      reviews: 13,
       learningPoints: [
         'Introduction to deep learning concepts, architectures, and frameworks like TensorFlow and PyTorch.',
         'Build and train neural networks for image recognition, natural language processing, and other complex tasks.'
       ],
-      skills: ['Python', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
+      skills: ["Neural networks", 'TensorFlow', 'Keras', 'PyTorch', 'SQL', 'Data Visualization']
 
     },
   ];
 
-  return (
-    <SpecializationContainer>
-        <br /><br />
-      <h2 className='font-bold'>Comprehensive Machine Learning Modules</h2>
-      <br />
-      <p>Master Machine Learning with this comprehensive course, covering foundational concepts, data preprocessing, supervised and unsupervised learning, deep learning techniques, and practical applications to build intelligent systems and derive insights from data.</p>
-      <CourseList courses={courses} />
-    </SpecializationContainer>
-  );
+  // return (
+  //   <SpecializationContainer>
+  //       <br /><br />
+  //     <h2 className='font-bold'>Comprehensive Machine Learning Modules</h2>
+  //     <br />
+  //     <p>Master Machine Learning with this comprehensive course, covering foundational concepts, data preprocessing, supervised and unsupervised learning, deep learning techniques, and practical applications to build intelligent systems and derive insights from data.</p>
+  //     <CourseList courses={courses} />
+  //   </SpecializationContainer>
+  // );
 };
 
 // Main App Component

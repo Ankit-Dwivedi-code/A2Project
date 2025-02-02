@@ -30,8 +30,9 @@ const Header = styled.div`
 const MainTitle = styled.h1`
   font-size: 2.5rem;
   margin: 0;
-  color: black;
+  color: Green;
   margin-bottom: 20px;
+  font-weight:bold;
 
   @media (max-width: 768px) {
     font-size: 1.5rem; 
@@ -39,25 +40,10 @@ const MainTitle = styled.h1`
   }
 `;
 
-const SubTitle = styled.p`
-  color: #36454F; 
-  font-size: 1.2rem;
-  margin: 0;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 1rem; 
-  }
-`;
-
-const Highlight = styled.span`
-  color: black;
-  font-weight: 600;
-`;
 const BoldText = styled.p`
   font-weight: bold;
-  color: orangered; 
-  font-size: 1.5rem; 
+  color: green; 
+  font-size: 1rem; 
   margin: 0;
   margin-bottom: 20px;
 `;
@@ -73,7 +59,7 @@ margin-top: 20px;
 
 @media (max-width: 768px) {
   flex-direction: column-reverse; 
-  align-items: center;
+  align-items:center;
   }
 `;
 
@@ -142,15 +128,11 @@ const Mern = () => {
             <Header>
               <MainTitle>DevOps</MainTitle>
             </Header>
-            <SubTitle>
-            Master <Highlight>DevOps with A2 Pyramid's elite training program. </Highlight>Gain hands-on skills, get certified, and launch your career in automation and cloud deployment.
-            </SubTitle>
-            <BoldText>Course Fee: 14,999/-</BoldText>
+            <br/>
             <p>6 Months  • Online  • 100% Live Sessions</p>
-            <BrochureButton>Enroll Now</BrochureButton>
-            <Footer>
-              Application Closes: 30th Oct 2024
-            </Footer>
+            <br/>
+            <BoldText>Course Fee: 14,999/-</BoldText>
+            <BrochureButton>Pay Now</BrochureButton>
           </InfoText>
           <BannerImage
             src="https://t3.ftcdn.net/jpg/05/12/04/52/360_F_512045284_gsbCu75oyqHo59MccBltJe0sJRck1PPa.jpg" />
@@ -386,15 +368,15 @@ const Specialization = () => {
       
   ];
 
-  return (
-    <SpecializationContainer>
-        <br /><br />
-      <h2 className='font-bold'> DevOps Learning Modules</h2>
-      <br />
-      <p>Master the art of DevOps with our immersive course modules designed to equip you with industry-relevant skills in continuous integration, deployment, automation, and cloud infrastructure. Learn essential tools and practices like Docker, Kubernetes, Jenkins, and cloud services, preparing you to streamline and optimize development and deployment pipelines.</p>
-      <CourseList courses={courses} />
-    </SpecializationContainer>
-  );
+  // return (
+  //   <SpecializationContainer>
+  //       <br /><br />
+  //     <h2 className='font-bold'> DevOps Learning Modules</h2>
+  //     <br />
+  //     <p>Master the art of DevOps with our immersive course modules designed to equip you with industry-relevant skills in continuous integration, deployment, automation, and cloud infrastructure. Learn essential tools and practices like Docker, Kubernetes, Jenkins, and cloud services, preparing you to streamline and optimize development and deployment pipelines.</p>
+  //     <CourseList courses={courses} />
+  //   </SpecializationContainer>
+  // );
 };
 
 // Main App Component

@@ -28,10 +28,11 @@ const Header = styled.div`
 `;
 
 const MainTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
-  color: black;
+  color: Green;
   margin-bottom: 20px;
+  font-weight:bold;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -56,8 +57,8 @@ const Highlight = styled.span`
 `;
 const BoldText = styled.p`
   font-weight: bold;
-  color: orangered; 
-  font-size: 1.5rem; 
+  color: green; 
+  font-size: 1rem; 
   margin: 0;
   margin-bottom: 20px;
 `;
@@ -92,7 +93,7 @@ const BrochureButton = styled.button`
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
 
   &:hover {
     background-color: #0056b3;
@@ -136,15 +137,13 @@ const Mern = () => {
             <Header>
               <MainTitle>DATA ANALYTICS</MainTitle>
             </Header>
-            <SubTitle>
-            Master <Highlight>Data Analytics with A2 Pyramid's industry-leading training and placement program.</Highlight> Acquire hands-on skills, earn professional certification, and unlock exciting career opportunities in the dynamic field of data analysis.
-            </SubTitle>
-            <BoldText>Course Fee: 19,999/-</BoldText>
+            <br/>
             <p>12 Months  • Online  • 100% Live Sessions</p>
-            <BrochureButton>Enroll Now</BrochureButton>
-            <Footer>
-              Application Closes: 30th Dec 2024
-            </Footer>
+            <br/>
+
+            <BoldText>Course Fee: 14,999/-</BoldText>
+            <BrochureButton>Pay Now</BrochureButton>
+          
           </InfoText>
           <BannerImage
             src="https://www.purplescape.com/wp-content/uploads/2022/08/Old-Blog-Banners-Purplescape-85.jpg" />
@@ -387,15 +386,15 @@ const Specialization = () => {
       },
   ];
 
-  return (
-    <SpecializationContainer>
-        <br /><br />
-      <h2 className='font-bold'>Data Analytics Learning Modules</h2>
-      <br />
-      <p>Master Data Analytics with this comprehensive course, covering essential topics such as data visualization, statistical analysis, machine learning, and data manipulation to extract valuable insights from complex datasets.</p>
-      <CourseList courses={courses} />
-    </SpecializationContainer>
-  );
+  // return (
+  //   <SpecializationContainer>
+  //       <br /><br />
+  //     <h2 className='font-bold'>Data Analytics Learning Modules</h2>
+  //     <br />
+  //     <p>Master Data Analytics with this comprehensive course, covering essential topics such as data visualization, statistical analysis, machine learning, and data manipulation to extract valuable insights from complex datasets.</p>
+  //     <CourseList courses={courses} />
+  //   </SpecializationContainer>
+  // );
 };
 
 // Main App Component

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'; // Keep these icons for WhatsApp and Phone
+import { FaPhone, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'; // Keep these icons for WhatsApp and Phone
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 const FloatingContactButton = () => {
@@ -43,7 +43,8 @@ const FloatingContactButton = () => {
           alt="Contact Us"
           className="w-8 h-8 object-contain " // Adjust the size as needed
         /> */}
-        <ConnectWithoutContactIcon style={{ color: 'white', fontSize: '24px' }} />
+        {/* <ConnectWithoutContactIcon style={{ color: 'white', fontSize: '24px' }} /> */}
+        <FaPhone style={{ color: 'white', fontSize: '20px' }} />
         </div>
       
     </div>

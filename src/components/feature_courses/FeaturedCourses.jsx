@@ -19,34 +19,40 @@ const FeaturedCourses = () => {
 
   const courses = [
     {
-      name: 'Data Structures',
-      description: 'Learn data structures with practical projects and in-depth lectures.',
-      image: '/img/dsa.webp' // Example image
-    },
-    {
-      name: 'Machine Learning',
-      description: 'Explore machine learning techniques and applications.',
-      image: '/img/machine_learning.avif' // Example image
-    },
-    {
-      name: 'Algorithms',
-      description: 'Master algorithms with step-by-step explanations and projects.',
-      image: '/img/algo.jpg' // Example image
-    },
-    {
-      name: 'Web Development',
+      name: 'Mern Stack',
       description: 'Build responsive websites using modern web technologies.',
-      image: '/img/webdev.webp' // Example image
+      image: '/img/webdev.webp', // Example image
+      link:"/curriculum-mern-stack"
     },
     {
-      name: 'Artificial Intelligence',
-      description: 'Dive into AI concepts and real-world applications.',
-      image: '/img/AI.webp' // Example image
+      name: 'Machine Learning /AI',
+      description: 'Explore machine learning techniques and applications.',
+      image: '/img/AI.webp', // Example image
+      link:"/curriculum-ai-ml"
     },
     {
-      name: 'Cloud Computing',
-      description: 'Understand cloud technologies and architecture with hands-on labs.',
-      image: '/img/cloud_comp.webp' // Example image
+      name: 'Data Analytics',
+      description: "Data analytics transforms data into business insights.",
+      image: '/img/algo.jpg', // Example image
+      link:"/curriculum-data-analytics"
+    },
+    {
+      name: 'Data Science',
+      description: "Data science analyzes data to solve complex real problems.",
+      image: '/img/webdev.webp', // Example image
+      link:"/curriculum-data-science"
+    },
+    {
+      name: "DevOps",
+      description: "DevOps integrates development & operations for seamless delivery.",
+      image:'/img/machine_learning.avif' , // Example image
+      link:"/curriculum-devops"
+    },
+    {
+      name: 'QA',
+      description: "QA ensures software quality through testing and validation.",
+      image: '/img/cloud_comp.webp', // Example image
+      link:"/curriculum-qa"
     }
   ];
 
@@ -75,9 +81,10 @@ const FeaturedCourses = () => {
               <img src={course.image} alt={course.name} className="w-full h-40 object-cover rounded-md mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-4">{course.name}</h3>
               <p className="text-gray-600">{course.description}</p>
-              <button className="mt-6 bg-blue-600 text-white py-2 px-4 rounded-full text-sm hover:bg-blue-700 transition-colors">
-                Read More...
-              </button>
+                <br/>
+              <a href={course.link} className="mt-6 bg-blue-600 text-white py-2 px-4 rounded-full text-sm hover:bg-blue-700 transition-colors">
+                Check Curriculum...
+              </a>
             </div>
           ))}
         </div>

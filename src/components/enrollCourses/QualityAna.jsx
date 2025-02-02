@@ -30,8 +30,9 @@ const Header = styled.div`
 const MainTitle = styled.h1`
   font-size: 2.5rem;
   margin: 0;
-  color: black;
+  color: Green;
   margin-bottom: 20px;
+  font-weight:bold;
 
   @media (max-width: 768px) {
     font-size: 1.5rem; 
@@ -56,8 +57,8 @@ const Highlight = styled.span`
 `;
 const BoldText = styled.p`
   font-weight: bold;
-  color: orangered; 
-  font-size: 1.5rem; 
+  color: green; 
+  font-size: 1rem; 
   margin: 0;
   margin-bottom: 20px;
 `;
@@ -140,17 +141,13 @@ const Mern = () => {
         <InfoContainer>
           <InfoText>
             <Header>
-              <MainTitle>Quality Assurance <br /> Engineering</MainTitle>
+              <MainTitle>Quality Assurance <br /><br/> Engineering</MainTitle>
             </Header>
-            <SubTitle>
-            Master <Highlight>QA Engineering with A2 Pyramid's elite training program.</Highlight> Gain hands-on skills, receive certification, and kickstart your career in software quality assurance and testing.
-            </SubTitle>
-            <BoldText>Course Fee: 18,999/-</BoldText>
+ <br/>
             <p>6 Months  • Online  • 100% Live Sessions</p>
-            <BrochureButton>Enroll Now</BrochureButton>
-            <Footer>
-              Application Closes: 30th Oct 2024
-            </Footer>
+            <br/>
+            <BoldText>Course Fee: 18,999/-</BoldText>
+            <BrochureButton>Pay Now</BrochureButton>
           </InfoText>
           <BannerImage
             src="https://www.interviewbit.com/blog/wp-content/uploads/2021/08/QA-Engineer-800x391.jpg" />
@@ -392,15 +389,15 @@ const Specialization = () => {
       
   ];
 
-  return (
-    <SpecializationContainer>
-        <br /><br />
-      <h2 className='font-bold'> QA Engineering Learning Modules</h2>
-      <br />
-      <p>Master the essentials of QA Engineering with our comprehensive learning modules, designed to provide you with industry-ready skills in manual and automated testing, performance analysis, and security assurance. Learn essential tools and practices like Selenium, Jira, JMeter, and Postman, preparing you to ensure software quality at every stage of development.</p>
-      <CourseList courses={courses} />
-    </SpecializationContainer>
-  );
+  // return (
+  //   <SpecializationContainer>
+  //       <br /><br />
+  //     <h2 className='font-bold'> QA Engineering Learning Modules</h2>
+  //     <br />
+  //     <p>Master the essentials of QA Engineering with our comprehensive learning modules, designed to provide you with industry-ready skills in manual and automated testing, performance analysis, and security assurance. Learn essential tools and practices like Selenium, Jira, JMeter, and Postman, preparing you to ensure software quality at every stage of development.</p>
+  //     <CourseList courses={courses} />
+  //   </SpecializationContainer>
+  // );
 };
 
 // Main App Component
