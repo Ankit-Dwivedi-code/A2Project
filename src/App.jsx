@@ -55,6 +55,9 @@ import MernStackSyllabus from './components/curriculum_info/mernStackCurriculum.
 import DevOpsSyllabus from './components/curriculum_info/devOPsCurriculum.jsx';
 import QASyllabus from './components/curriculum_info/qACurriculum.jsx';
 
+//Student profile
+import Profile from './components/profile/Profile.jsx';
+
 
 function App() {
   return (
@@ -246,6 +249,13 @@ function App() {
         <Footer />
         </>} />
 
+        {/* profile page */}
+
+<Route path='/profile' element={<>
+        <Navbar />
+        <Profile />
+        <Footer />
+        </>} />
 
         {/* Error Page  */}
         <Route path='*' element={<>
