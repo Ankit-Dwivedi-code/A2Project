@@ -2,17 +2,30 @@ import React, { useState } from 'react';
 import './MeetOurInstructors.css'; // Import for custom styles
 
 const instructors = [
-  {
-    name: 'Dr. xyz Sharma',
-    role: 'Senior Full-Stack Developer',
-    image: '/img/men.png', 
-    bio: 'Dr. xyz has over 10 years of experience in full-stack development and has worked with various technologies, including React, Node.js, and MongoDB.',
-  },
+  
   {
     name: 'Mr. xyz Verma',
     role: 'Data Science Expert',
     image: '/img/men.png', 
     bio: 'xyz specializes in data analysis and machine learning, guiding students through practical projects in Python and R.',
+  },
+  {
+    name: 'Ms. abc Iyer',
+    role: 'UI/UX Designer',
+    image: '/img/women.png', 
+    bio: 'With a keen eye for design, abc helps students understand the principles of UI/UX and how to create user-friendly applications.',
+  },
+  {
+    name: 'Mr. def Patel',
+    role: 'Machine Learning Specialist',
+    image: '/img/men.png', 
+    bio: 'def focuses on teaching the fundamentals of machine learning, from theory to practical implementations in real-world projects.',
+  },
+  {
+    name: 'Ankit Dwivedi',
+    role: 'Full-Stack Developer',
+    image: '/img/ankit.jpg', 
+    bio: 'Ankit Dwivedi has over 1 year of experience in full-stack development and has worked with various technologies, including React, Node.js, and MongoDB.',
   },
   {
     name: 'Ms. abc Iyer',
