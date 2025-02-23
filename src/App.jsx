@@ -188,6 +188,7 @@ function App() {
         <Route path='/course-Mern' element={<>
         <Navbar />
         <Mern />
+        {/* <Specialization /> */}
         <Footer />
         </>} />
 
